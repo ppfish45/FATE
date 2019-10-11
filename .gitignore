@@ -8,6 +8,7 @@ __pycache__
 *.class
 
 # excluded paths
+/arch/eggroll/storage-service-cxx/third_party/
 /arch/core/target/
 /arch/driver/federation/target/
 /arch/eggroll/egg/target/
