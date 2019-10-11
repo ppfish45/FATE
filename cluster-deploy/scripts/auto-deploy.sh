@@ -43,7 +43,7 @@ sed -i "36s#PROTOC =.*#PROTOC = $dir/storage-service-cxx/third_party/bin/protoc#
 sed -i "37s#GRPC_CPP_PLUGIN =.*#GRPC_CPP_PLUGIN = $dir/storage-service-cxx/third_party/bin/grpc_cpp_plugin#g" ./storage-service-cxx/Makefile
 sed -i "s#/usr/local/lib.*#/usr/local/lib:$dir/storage-service-cxx/third_party/lib#g" ./storage-service-cxx/service.sh
 
-tar -czf fate.tar ./*
+tar --exclude=fate.tar -czf fate.tar ./*
 
 eval iplength=\${#iplist[*]}
 	for ((j=0;j<$iplength;j++))
